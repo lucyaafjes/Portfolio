@@ -1,9 +1,4 @@
-# Jouw portfolio website
-
-Dit is een volledig zelfstandige website: alleen HTML, CSS en JavaScript,
-zonder builder, template-dienst of maandelijkse kosten. De bestanden zijn
-van jou — je kunt ze overal hosten of zelfs gewoon op je eigen computer
-laten staan.
+# Portfolio website
 
 ## Bestanden
 
@@ -17,7 +12,7 @@ laten staan.
 | `images/` | Omslagfoto's voor de homepage |
 | `images/projecten/` | Foto's die je in de losse projectpagina's gebruikt |
 
-Elk project heeft dus twee plekken: een tegel op de homepage (uit
+Elk project heeft twee plekken: een tegel op de homepage (uit
 `projects.js`) én een eigen pagina met alle foto's en tekst (in de map
 `projecten`). Die twee zijn aan elkaar gekoppeld via het veld `page`.
 
@@ -77,42 +72,3 @@ klikbaar naar de eigen pagina.
 Je hoeft nooit `script.js` aan te passen, tenzij je functionaliteit wilt
 toevoegen.
 
-## 4. Gratis hosten — twee makkelijke opties
-
-### Optie A: GitHub Pages (aanbevolen, volledig gratis)
-
-1. Maak een gratis account op [github.com](https://github.com).
-2. Maak een nieuwe **public repository**, bijvoorbeeld genaamd
-   `portfolio`.
-3. Upload alle bestanden uit deze map (via "Add file" → "Upload files"
-   in de browser — geen command line nodig).
-4. Ga naar **Settings → Pages** in die repository.
-5. Kies bij "Branch" de optie `main` en map `/ (root)`, klik Save.
-6. Na een paar minuten is je site live op
-   `https://jouwgebruikersnaam.github.io/portfolio`.
-
-Voortaan: elke keer dat je een bestand aanpast en opnieuw upload naar
-GitHub, wordt de site automatisch bijgewerkt.
-
-### Optie B: Netlify (ook gratis, drag-and-drop)
-
-1. Ga naar [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Sleep de hele `portfolio`-map in het venster.
-3. Klaar — je krijgt direct een live link.
-4. Voor updates: sleep de map opnieuw, of koppel Netlify aan een
-   GitHub-repository voor automatische updates.
-
-Beide opties zijn gratis voor persoonlijke portfolio's, geven je een
-eigen link, en je kunt er later eventueel een eigen domeinnaam aan
-koppelen.
-
-## Basisbegrippen die handig zijn om te kennen
-
-- **HTML** = de inhoud/structuur (tekst, afbeeldingen, koppen).
-- **CSS** = het uiterlijk (kleuren, lettertypes, afstanden).
-- **JavaScript** = het gedrag (bv. het automatisch tonen van projecten,
-  het open-/dichtklappen van het menu).
-
-Je hoeft deze niet volledig te leren om deze site te onderhouden — voor
-90% van de aanpassingen (nieuwe projecten, tekst, foto's, kleuren) kopieer
-je gewoon een bestaand voorbeeld en pas je de tekst aan.
