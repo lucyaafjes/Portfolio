@@ -1,8 +1,5 @@
 /* ============================================================
    INSTELLINGEN — pas hier kleuren en lettertype makkelijk aan
-   Stijl geïnspireerd op de sobere, architectonische huisstijl
-   van mecanoo.nl: monochroom, veel witruimte, scherpe hoeken,
-   uppercase labels met letterspacing, geen ronde vormen.
    ============================================================ */
 :root {
   --color-bg: #ffffff;
