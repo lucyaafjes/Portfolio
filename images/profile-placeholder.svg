@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#eeeeee"/>
+  <rect x="0" y="0" width="400" height="400" fill="none" stroke="#111111" stroke-width="1"/>
+  <circle cx="200" cy="160" r="70" fill="#cccccc"/>
+  <path d="M80 340c0-70 54-120 120-120s120 50 120 120" fill="#cccccc"/>
+  <text x="200" y="380" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle" letter-spacing="1">VERVANG MET EIGEN FOTO</text>
+</svg>
