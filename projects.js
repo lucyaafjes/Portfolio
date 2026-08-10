@@ -46,39 +46,37 @@
 
 const projects = [
   {
-    title: "Project Een",
-    category: "Ontwerp",
-    image: "images/project-placeholder-1.svg",
+    title: "Van Boom naar Bouwen",
+    category: "Architectuur",
+    image: "images/cover-van-boom.jpg",
     page: "projecten/project-1.html"
   },
   {
-    title: "Project Twee",
-    category: "Illustratie",
-    image: "images/project-placeholder-2.svg",
+    title: "Het Karwei",
+    category: "Architectuur",
+    image: "images/cover-karwei.jpg",
     page: "projecten/project-2.html"
   },
   {
-    title: "Project Drie",
-    category: "Fotografie",
-    image: "images/project-placeholder-3.svg",
+    title: "Logo Lustrum Christiaan Huygens",
+    category: "Branding",
+    image: "images/cover-lustrum.jpg",
     page: "projecten/project-3.html"
   },
   {
-    title: "Project Vier",
-    category: "Ontwerp",
-    image: "images/project-placeholder-4.svg",
+    title: "IGOvisie — Hogeschool Rotterdam",
+    category: "Visualisatie",
+    image: "images/cover-igo.jpg",
     page: "projecten/project-4.html"
   },
   {
-    title: "Project Vijf",
-    category: "Branding",
-    image: "images/project-placeholder-5.svg",
+    title: "Wijlandje — Cadix",
+    category: "Architectuur",
+    image: "images/cover-wijlandje.jpg",
     page: "projecten/project-5.html"
-  },
-  {
-    title: "Project Zes",
-    category: "Illustratie",
-    image: "images/project-placeholder-6.svg",
-    page: "projecten/project-6.html"
   }
 ];
+
+// project-6.html staat nog als leeg sjabloon in de map "projecten" —
+// kopieer dat bestand als je een nieuw project wilt toevoegen (zie
+// stappenplan hierboven).
