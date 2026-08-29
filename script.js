@@ -5,7 +5,9 @@
    - Regelt het wisselen tussen de "pagina's" Home / Werk / Over mij / Contact
      (dit is één HTML-bestand, maar het voelt als losse pagina's aan)
    - Regelt het mobiele menu en de uitklap-menu's
-   - Bouwt de projecttegels op de Werk-pagina op uit projects.js
+   - Bouwt de projecttegels op de Projecten-pagina op uit projects.js
+   - Vult de losse projectpagina (projecten/project.html) met de juiste
+     titel, tekst en foto's uit projects.js, op basis van "?slug=..."
    - Regelt het "verschijn"-animatie-effect tijdens het scrollen
    ============================================================ */
 
@@ -178,13 +180,13 @@
   function buildProductCard(project) {
     var article = document.createElement('article');
     article.className = 'product-card reveal visible';
-    var inner = project.page ? document.createElement('a') : document.createElement('div');
-    if (project.page) {
+    var inner = project.slug ? document.createElement('a') : document.createElement('div');
+    if (project.slug) {
       inner.className = 'card-link';
-      inner.href = project.page;
+      inner.href = 'projecten/project.html?slug=' + encodeURIComponent(project.slug);
     }
     inner.innerHTML =
-      '<div class="frame"><img src="' + project.image + '" alt="' + project.title + '" loading="lazy"></div>' +
+      '<div class="frame"><img src="' + project.cover + '" alt="' + project.title + '" loading="lazy"></div>' +
       '<div class="product-info">' +
       '<div><h3 class="product-name">' + project.title + '</h3><p class="product-cat">' + project.category + '</p></div>' +
       '</div>';
@@ -231,6 +233,68 @@
 
       renderFilters();
       renderWerkGrid();
+    }
+  }
+
+  /* ============ PROJECTDETAILPAGINA (projecten/project.html) ============ */
+  var projTitleEl = document.getElementById('projTitle');
+  if (projTitleEl && typeof projects !== 'undefined') {
+    var params = new URLSearchParams(location.search);
+    var slug = params.get('slug');
+    var index = projects.findIndex(function (p) { return p.slug === slug; });
+    var project = index !== -1 ? projects[index] : null;
+
+    if (project) {
+      document.title = project.title + ' — Lucy Aafjes';
+      var descEl = document.getElementById('pageDescription');
+      if (descEl) descEl.setAttribute('content', project.title + ' — Lucy Aafjes.');
+
+      document.getElementById('projCategory').textContent = project.category;
+      projTitleEl.textContent = project.title;
+      document.getElementById('projIntro').textContent = project.intro || '';
+
+      var textEl = document.getElementById('projText');
+      (project.text || []).forEach(function (paragraph) {
+        var p = document.createElement('p');
+        p.textContent = paragraph;
+        textEl.appendChild(p);
+      });
+
+      var quoteEl = document.getElementById('projQuote');
+      if (quoteEl && project.quote && project.quote.text) {
+        quoteEl.innerHTML =
+          '<div class="band band-quote band-violet">' +
+          '<div class="container reveal visible">' +
+          '<span class="quote-mark">&ldquo;</span>' +
+          '<p class="editorial-title big-quote"></p>' +
+          '<p class="quote-attr"></p>' +
+          '</div></div>';
+        quoteEl.querySelector('.big-quote').textContent = project.quote.text;
+        quoteEl.querySelector('.quote-attr').textContent = project.quote.attribution || '';
+      }
+
+      var galleryEl = document.getElementById('projGallery');
+      (project.photos || []).forEach(function (photo) {
+        var img = document.createElement('img');
+        img.src = '../' + photo.src;
+        img.alt = photo.alt || project.title;
+        img.loading = 'lazy';
+        if (photo.wide) img.className = 'wide';
+        galleryEl.appendChild(img);
+      });
+
+      var n = projects.length;
+      var prevProject = projects[(index - 1 + n) % n];
+      var nextProject = projects[(index + 1) % n];
+      var prevLink = document.getElementById('projPrev');
+      var nextLink = document.getElementById('projNext');
+      if (prevLink) prevLink.href = 'project.html?slug=' + encodeURIComponent(prevProject.slug);
+      if (nextLink) nextLink.href = 'project.html?slug=' + encodeURIComponent(nextProject.slug);
+    } else {
+      document.getElementById('projTitle').textContent = 'Project niet gevonden';
+      document.getElementById('projIntro').textContent = 'Dit project bestaat niet (meer). Ga terug naar het overzicht.';
+      var navEl = document.querySelector('.project-nav');
+      if (navEl) navEl.style.display = 'none';
     }
   }
 

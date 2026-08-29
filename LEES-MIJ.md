@@ -5,91 +5,89 @@
 | Bestand / map | Waarvoor |
 |---|---|
 | `index.html` | De hele site (Home, Projecten, Over mij, Contact) — één bestand, wisselt van "pagina" als je op een menu-link klikt |
-| `projects.js` | **De lijst van projecttegels** — titel, categorie, omslagfoto, link naar de eigen pagina |
-| `projecten/` | **Eén los HTML-bestand per project** — hier zet je de foto's en uitgebreide tekst van elk project |
+| `projects.js` | **Alles over je projecten staat hier**: titel, categorie, omslagfoto, tekst én foto's van elk project |
+| `projecten/project.html` | Eén leeg sjabloon voor alle projectpagina's — dit hoef je nooit te openen, het vult zichzelf automatisch met de juiste inhoud uit `projects.js` |
 | `style.css` | Kleuren, lettertype, opmaak |
-| `script.js` | Zorgt dat projecten automatisch verschijnen, dat de "pagina's" wisselen en dat het mobiele menu werkt (hoef je niet aan te passen) |
+| `script.js` | Zorgt dat projecten automatisch verschijnen en dat de pagina's/het menu werken (hoef je niet aan te passen) |
 | `images/` | Omslagfoto's voor het projectoverzicht |
-| `images/projecten/` | Foto's die je in de losse projectpagina's gebruikt |
-
-Elk project heeft twee plekken: een tegel op de Projecten-pagina (uit
-`projects.js`) én een eigen pagina met alle foto's en tekst (in de map
-`projecten`). Die twee zijn aan elkaar gekoppeld via het veld `page`.
+| `images/projecten/` | Foto's die je in de projectpagina's gebruikt |
 
 ## 1. Eerst lokaal bekijken
 
 Dubbelklik op `index.html` — deze opent in je browser. Klik op een
 project om de eigen pagina te zien.
 
-## 2. Werken vanuit je map "Portfolio-projecten"
+## 2. Tekst en foto's van een project aanpassen — het enige bestand dat je nodig hebt
 
-Op je bureaublad staat de map **Portfolio-projecten**, met daarin
-submapjes per categorie (Architectuur, Illustratie, Visie: onderzoek)
-en daarbinnen weer een mapje per project. Dit is de makkelijkste manier
-om nieuw materiaal aan te leveren:
-
-- Zet foto's van een project in het bijbehorende mapje.
-- Zet tekstfragmenten erbij (bv. als los tekstbestand, of stuur ze door
-  in het gesprek met Claude).
-- Laat Claude weten wanneer een mapje compleet is, dan wordt het
-  verwerkt in de bijbehorende projectpagina en het overzicht.
-
-Je kunt dit ook zelf handmatig doen — zie hieronder.
-
-## 3. Zelf een nieuw project toevoegen
-
-**Stap 1 — maak de projectpagina.**
-Ga naar de map `projecten`, maak een kopie van bijvoorbeeld
-`fortmond.html` en hernoem die naar de naam van je project (bv.
-`mijn-project.html`). Open het nieuwe bestand in een teksteditor
-(Kladblok, TextEdit, of gratis [VS Code](https://code.visualstudio.com))
-en pas aan:
-
-- Titel, categorie en teksten (`project-page-category`, `<h1>`,
-  `project-page-intro`, de alinea's in `project-page-body`).
-- De foto's: zet je eigen foto's in `images/projecten` en voeg voor
-  elke foto een regel toe zoals:
-  ```html
-  <img src="../images/projecten/mijn-foto.jpg" alt="Omschrijving van de foto">
-  ```
-  Je kunt zoveel foto's toevoegen als je wilt door deze regel te
-  herhalen. Voeg `class="wide"` toe om een foto extra breed te tonen.
-
-**Stap 2 — voeg de tegel toe aan het overzicht.**
-Open `projects.js` en kopieer een bestaand blokje tussen `{ }`:
+Open **`projects.js`** in een teksteditor (Kladblok, TextEdit, of gratis
+[VS Code](https://code.visualstudio.com)). Zoek het project dat je wilt
+aanpassen — elk project is een blokje tussen `{ }` met deze velden:
 
 ```js
 {
-  title: "Mijn nieuwe project",
+  slug: "fortmond",
+  title: "Fortmond",
   category: "Architectuur",
-  image: "images/mijn-omslagfoto.jpg",
-  page: "projecten/mijn-project.html"
-},
+  cover: "images/cover-fortmond.jpg",
+  intro: "Korte omschrijving — bv. de periode of opdrachtgever.",
+  text: [
+    "Eerste alinea van je projectbeschrijving.",
+    "Tweede alinea, of verwijder deze regel als je er maar één wilt."
+  ],
+  photos: [
+    { src: "images/projecten/fortmond-1.jpg", alt: "Aanzicht Fortmond", wide: true },
+    { src: "images/projecten/fortmond-2.jpg", alt: "Woonkamer Fortmond", wide: false }
+  ]
+}
 ```
 
-De `category` bepaalt bij welke filterknop het project verschijnt op
-de Projecten-pagina — gebruik dezelfde naam als je mapje in
-"Portfolio-projecten" (Architectuur, Illustratie, of Visie: onderzoek),
-of verzin een nieuwe categorie als je die nog niet hebt.
+- **`title`, `category`, `intro`** → gewoon tekst tussen aanhalingstekens, pas aan wat je wilt.
+- **`text`** → een lijstje van alinea's. Voeg een regel toe voor een nieuwe alinea (vergeet de komma niet), of verwijder er een.
+- **`photos`** → een lijstje van foto's. Voeg een regel toe om een foto toe te voegen, verwijder een regel om er een weg te halen, of verander de volgorde door de regels te verslepen. Zet `wide: true` om een foto over de volle breedte te tonen, of `wide: false` voor normale grootte.
+- **`cover`** → de omslagfoto die op de tegel in het overzicht staat.
 
-Zet je omslagfoto (de foto die op de tegel in het overzicht staat) in
-de map `images`. Sla beide bestanden op en ververs `index.html` — het
-nieuwe project verschijnt automatisch, inclusief filterknop, en is
-klikbaar naar de eigen pagina.
+Zet je foto-bestanden zelf in de map `images/projecten` (en je omslagfoto
+in `images`), gebruik dezelfde bestandsnaam bij `src`/`cover`. Sla
+`projects.js` op en ververs `index.html` — alles verschijnt automatisch,
+zowel op de tegel als op de eigen projectpagina.
 
-## 4. Teksten en foto's aanpassen
+Je hoeft **nooit** een bestand in de map `projecten` te openen — die
+pagina vult zichzelf.
+
+## 3. Een heel nieuw project toevoegen
+
+Kopieer een compleet blokje (van `{` tot en met de bijbehorende `}`) in
+`projects.js`, plak het tussen twee andere projecten, en pas alle velden
+aan — geef het een unieke `slug` (geen spaties, bijvoorbeeld
+`mijn-project`). Zet je foto's in `images/projecten` en je omslagfoto in
+`images`. Sla op — het project verschijnt automatisch, inclusief
+filterknop en "vorig/volgend project"-navigatie.
+
+## 4. Werken vanuit je map "Portfolio-projecten"
+
+Op je bureaublad staat de map **Portfolio-projecten**, met submapjes per
+categorie en daarbinnen een mapje per project. Zet daar foto's en
+tekstfragmenten in en laat het weten in het gesprek met Claude — dan
+wordt het voor je verwerkt in `projects.js` zoals hierboven beschreven.
+
+## 5. Overige teksten en instellingen
 
 - **Naam, tagline, over-mij tekst, contactgegevens, social media links** →
   pas je aan in `index.html`.
-- **Tekst en foto's van een specifiek project** → open het bijbehorende
-  bestand in de map `projecten` (bv. `projecten/fortmond.html`).
-- **Profielfoto** → vervang `images/profile-lucy.jpg` door je eigen
-  foto (zelfde bestandsnaam, of pas de naam aan in `index.html`).
+- **Profielfoto** → vervang `images/profile-lucy.jpg` door je eigen foto
+  (zelfde bestandsnaam, of pas de naam aan in `index.html`).
 - **Kleuren en lettertype** → helemaal bovenin `style.css` staat een
   blok `:root { ... }` met kleuren zoals `--accent-crimson` (rood) en
-  `--accent-violet` (paars) en het lettertype bij `--font-editorial` /
+  `--accent-violet` (paars), en het lettertype bij `--font-editorial` /
   `--font-ui`. Verander de kleurcodes om de hele site een andere kleur
   te geven.
 
 Je hoeft nooit `script.js` aan te passen, tenzij je functionaliteit wilt
 toevoegen.
+
+## Opruimen (optioneel)
+
+De map `projecten` bevat nog oude, niet meer gebruikte bestanden
+(`fortmond.html`, `het-karwei.html`, `project-1.html` t/m `project-6.html`,
+enz.) van vóór deze aanpassing. Die mag je zelf verwijderen in Finder —
+alleen `projecten/project.html` wordt nog gebruikt.
