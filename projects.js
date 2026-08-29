@@ -59,20 +59,22 @@ const projects = [
     category: "Architectuur",
     cover: "images/cover-fortmond.jpg",
     intro: "Nog tijdens mijn afstuderen kreeg ik de opdracht van mijn ouders om hun voor-altijd-huis te ontwerpen. Gelegen in de uiterwaarden van de IJssel ligt het prachtige Fortmond. Waar vroeger bedrijvig baksteen met klei uit de IJssel werd gebakken, rijst de fabrieksuitlaat nu boven een beschermd natuurgebied met enkele huizen. Een renovatie van de oude boerderij volgde, met een vervolgopdracht om de schuur ook zelf te verbouwen. Zie hiervoor het resultaat bij het project de jeugdherberg.",
+photos: [
+      { src: "images/projecten/fortmond-1.jpg", alt: "Aanzicht Fortmond", wide: true },
     text: [
       "Bij aankoop was de woning zo onlogisch ingedeeld, het mooiste plekje van het huis had een badkamer met klein raampje. Dat hebben we radicaal veranderd.",
       "In een omgeving die al zoveel geeft, mag er ook een ontwerp met kleur en vorm tegenover staan. Daarnaast kan je juist ook de architectuur gebruiken als omlijsting van deze natuur en vergezichten.",
-      "De opdracht was vooral “er mag geen muur wit zijn”, dat is uiteindelijk toch niet helemaal gelukt. Maar er mist zeker geen kleur."
     ],
-    quote: {
-      text: "Er mag geen muur wit zijn.",
-      attribution: "Opdracht van de bewoners"
-    },
+
     photos: [
-      { src: "images/projecten/fortmond-1.jpg", alt: "Aanzicht Fortmond", wide: true },
       { src: "images/projecten/fortmond-6.jpg", alt: "Beschilderd plafond met bloemmotief boven de erker, Fortmond", wide: false },
       { src: "images/projecten/fortmond-3.jpg", alt: "Badkamer Fortmond", wide: false },
       { src: "images/projecten/fortmond-5.jpg", alt: "Blik vanaf de trap op de woonkamer met groene bank en kleurrijke gordijnen, Fortmond", wide: false },
+    quote: {
+      text: "Ee opdracht was vooral “er mag geen muur wit zijn”, dat is uiteindelijk toch niet helemaal gelukt. Maar er mist zeker geen kleur.",
+      attribution: "Over de styling"
+    },
+    photos: [
       { src: "images/projecten/fortmond-4.jpg", alt: "Uitzicht Fortmond", wide: true }
     ]
   },
