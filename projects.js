@@ -70,8 +70,7 @@ const projects = [
     },
     photos: [
       { src: "images/projecten/fortmond-1.jpg", alt: "Aanzicht Fortmond", wide: true },
-      { src: "images/projecten/fortmond-2.jpg", alt: "Woonkamer Fortmond", wide: false },
-      { src: "images/projecten/fortmond-6.jpg", alt: "Beschilderd plafond met bloemmotief boven de erker, Fortmond", wide: true },
+      { src: "images/projecten/fortmond-6.jpg", alt: "Beschilderd plafond met bloemmotief boven de erker, Fortmond", wide: false },
       { src: "images/projecten/fortmond-3.jpg", alt: "Badkamer Fortmond", wide: false },
       { src: "images/projecten/fortmond-5.jpg", alt: "Blik vanaf de trap op de woonkamer met groene bank en kleurrijke gordijnen, Fortmond", wide: false },
       { src: "images/projecten/fortmond-4.jpg", alt: "Uitzicht Fortmond", wide: true }
