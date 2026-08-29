@@ -34,7 +34,6 @@
       link.classList.toggle('is-active', link.getAttribute('data-route') === route);
     });
   }
-
   function showPage(route, anchor) {
     var target = document.getElementById('page-' + route);
     if (!target) return;
