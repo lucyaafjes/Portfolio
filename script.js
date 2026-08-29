@@ -15,7 +15,7 @@
   var pages = document.querySelectorAll('.page');
   var routeLinks = document.querySelectorAll('[data-route]');
   var navLinks = document.querySelectorAll('.main-nav .nav-link, .mobile-nav .m-link[data-route]');
-  var validRoutes = ['home', 'werk', 'over-mij', 'contact'];
+  var validRoutes = ['home', 'projecten', 'over-mij', 'contact'];
   var currentRoute = null;
   var transitioning = false;
 
@@ -201,8 +201,8 @@
       });
     }
 
-    // Volledig overzicht + filters op de Werk-pagina
-    var werkGrid = document.getElementById('werkGrid');
+    // Volledig overzicht + filters op de Projecten-pagina
+    var werkGrid = document.getElementById('projectenGrid');
     var filtersEl = document.getElementById('filters');
     if (werkGrid && filtersEl) {
       var categories = ['Alles'].concat(projects.map(function (p) { return p.category; }).filter(function (cat, i, arr) { return arr.indexOf(cat) === i; }));

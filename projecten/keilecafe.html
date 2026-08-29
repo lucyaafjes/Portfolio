@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keilecafé — Lucy Aafjes</title>
+<meta name="description" content="Keilecafé — Lucy Aafjes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATIE ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html#home" class="brand">LUCY <span>//</span> AAFJES</a>
+
+      <nav class="main-nav" aria-label="Primair">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#projecten">Projecten</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#over-mij">Over mij</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../index.html#contact" class="nav-cta">Neem contact op</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu openen" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBIEL MENU ===== -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobiel">
+    <ul>
+      <li><a class="m-link" href="../index.html#home">Home</a></li>
+      <li><a class="m-link" href="../index.html#projecten">Projecten</a></li>
+      <li><a class="m-link" href="../index.html#over-mij">Over mij</a></li>
+      <li><a class="m-link" href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PROJECT INTRO ===== -->
+  <section class="project-page-header">
+    <div class="container">
+      <a href="../index.html#projecten" class="back-link">&larr; Terug naar overzicht</a>
+      <span class="project-page-category">Visie: onderzoek</span>
+      <h1>Keilecafé</h1>
+      <p class="project-page-intro">
+        Korte omschrijving van dit project: wat was de vraag, wat heb je gemaakt, en voor wie.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== UITGEBREIDE TEKST ===== -->
+  <section class="project-page-body">
+    <div class="container">
+      <p>
+        Vertel hier uitgebreider over dit project. Wat was de opdracht, hoe ben je te werk gegaan, en welke keuzes heb je gemaakt?
+      </p>
+      <p>
+        Voeg gerust een tweede alinea toe over het eindresultaat of wat je hebt geleerd tijdens dit project.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOTOGALERIJ ===== -->
+  <section class="container project-gallery">
+    <img src="../images/cover-placeholder.jpg" alt="Foto's van Keilecafé volgen nog" class="wide">
+  </section>
+
+  <!-- ===== VOLGEND/VORIG PROJECT ===== -->
+  <nav class="container project-nav">
+    <a href="phd-vormgeving.html" class="back-link">&larr; Vorig project</a>
+    <a href="space-for-sexwerk.html" class="back-link">Volgend project &rarr;</a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Lucy Aafjes. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

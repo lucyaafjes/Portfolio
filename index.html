@@ -3,9 +3,9 @@
   Gebaseerd op het gratis "Lumen Eighty" template van TemplateMo
   (https://templatemo.com/tm-628-lumen-eighty), aangepast tot het
   portfolio van Lucy Aafjes. Dit ziet er in de browser uit als 4 losse
-  pagina's (Home / Werk / Over mij / Contact), maar is technisch één
+  pagina's (Home / Projecten / Over mij / Contact), maar is technisch één
   bestand: script.js wisselt de zichtbare sectie op basis van de link
-  waar je op klikt (en van #werk / #contact etc. in de adresbalk).
+  waar je op klikt (en van #projecten / #contact etc. in de adresbalk).
 -->
 <html lang="nl">
 <head>
@@ -29,13 +29,13 @@
       <ul class="nav-list">
         <li class="nav-item"><a class="nav-link" href="#home" data-route="home">Home</a></li>
         <li class="nav-item has-drop">
-          <a class="nav-link" href="#werk" data-route="werk" aria-haspopup="true">Werk <span class="caret"></span></a>
+          <a class="nav-link" href="#projecten" data-route="projecten" aria-haspopup="true">Projecten <span class="caret"></span></a>
           <ul class="dropdown">
             <li class="drop-label">Categorieën</li>
-            <li><a href="#werk" data-route="werk" data-anchor="werkGrid">Alle projecten</a></li>
-            <li><a href="#werk" data-route="werk" data-anchor="werkGrid">Architectuur</a></li>
-            <li><a href="#werk" data-route="werk" data-anchor="werkGrid">Branding</a></li>
-            <li><a href="#werk" data-route="werk" data-anchor="werkGrid">Visualisatie</a></li>
+            <li><a href="#projecten" data-route="projecten" data-anchor="projectenGrid">Alle projecten</a></li>
+            <li><a href="#projecten" data-route="projecten" data-anchor="projectenGrid">Architectuur</a></li>
+            <li><a href="#projecten" data-route="projecten" data-anchor="projectenGrid">Illustratie</a></li>
+            <li><a href="#projecten" data-route="projecten" data-anchor="projectenGrid">Visie: onderzoek</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="#over-mij" data-route="over-mij">Over mij</a></li>
@@ -54,7 +54,7 @@
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobiel">
   <ul>
     <li><a class="m-link" href="#home" data-route="home">Home</a></li>
-    <li><a class="m-link" href="#werk" data-route="werk">Werk</a></li>
+    <li><a class="m-link" href="#projecten" data-route="projecten">Projecten</a></li>
     <li><a class="m-link" href="#over-mij" data-route="over-mij">Over mij</a></li>
     <li><a class="m-link" href="#contact" data-route="contact">Contact</a></li>
   </ul>
@@ -70,16 +70,16 @@
       <div class="reveal">
         <span class="eyebrow">Rotterdam / Architectonisch ontwerp</span>
         <h1 class="editorial-title hero-title" style="margin-top:22px;">Ruimte geven<br>aan <em>het idee</em>.</h1>
-        <p class="lede hero-copy">Ik ben Lucy een ontwerper gebaseerd uit Rotterdam. Ik hou me bezig met het maken van een Visie tot het bouwen van architectuur. </p>
+        <p class="lede hero-copy">Ik ben Lucy, een ontwerper gebaseerd uit Rotterdam. Ik hou me bezig met het maken van een visie tot het bouwen van architectuur.</p>
         <div class="hero-actions">
-          <a href="#werk" class="btn btn-solid" data-route="werk">Bekijk mijn werk</a>
+          <a href="#projecten" class="btn btn-solid" data-route="projecten">Bekijk mijn projecten</a>
           <a href="#over-mij" class="btn" data-route="over-mij">Over mij</a>
         </div>
       </div>
       <div class="hero-visual reveal">
-        <span class="hero-meta">Portfolio &middot; Architectuur / Branding / Visualisatie</span>
+        <span class="hero-meta">Portfolio &middot; Architectuur / Illustratie / Onderzoek</span>
         <div class="frame hero-img-main">
-          <img src="images/cover-van-boom.jpg" alt="Van Boom naar Bouwen" loading="eager">
+          <img src="images/cover-fortmond.jpg" alt="Fortmond" loading="eager">
         </div>
         <div class="frame hero-img-detail">
           <img src="images/profile-lucy.jpg" alt="Foto van Lucy Aafjes" loading="lazy">
@@ -105,7 +105,7 @@
           <span class="eyebrow">Uitgelicht werk</span>
           <h2 class="editorial-title section-title">Een selectie</h2>
         </div>
-        <a href="#werk" class="text-link" data-route="werk">Volledig overzicht</a>
+        <a href="#projecten" class="text-link" data-route="projecten">Volledig overzicht</a>
       </div>
       <div class="product-grid" id="featuredGrid">
         <!-- Projectkaarten worden hier automatisch geladen vanuit projects.js -->
@@ -164,13 +164,13 @@
 
 </section>
 
-<!-- ============ PAGINA: WERK ============ -->
-<section class="page" id="page-werk">
+<!-- ============ PAGINA: PROJECTEN ============ -->
+<section class="page" id="page-projecten">
 
   <div class="page-hero">
     <div class="container reveal">
-      <span class="eyebrow">Werk</span>
-      <h1 class="editorial-title page-hero-title">Architectuur, <span class="editorial-italic" style="color:var(--accent-violet);">branding &amp; visualisatie</span></h1>
+      <span class="eyebrow">Projecten</span>
+      <h1 class="editorial-title page-hero-title">Architectuur, <span class="editorial-italic" style="color:var(--accent-violet);">illustratie &amp; onderzoek</span></h1>
       <p class="lede" style="margin-top:24px;">Een selectie van projecten. Klik op een project voor foto's en meer uitleg. Nieuwe projecten toevoegen doe je in <code>projects.js</code> en de map <code>projecten</code>.</p>
     </div>
   </div>
@@ -178,7 +178,7 @@
   <div class="catalogue-section">
     <div class="container">
       <div class="filters" id="filters"></div>
-      <div class="product-grid" id="werkGrid">
+      <div class="product-grid" id="projectenGrid">
         <!-- Projectkaarten worden hier automatisch geladen vanuit projects.js -->
       </div>
     </div>
@@ -292,13 +292,13 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#home" class="brand" data-route="home">LUCY <span>//</span> AAFJES</a>
+        <a href="#home" class="brand" data-route="home">LUCY AAFJES</a>
         <p>Architectonisch ontwerper en illustrator uit Rotterdam.</p>
       </div>
       <div class="footer-col">
-        <h4>Werk</h4>
+        <h4>Projecten</h4>
         <ul>
-          <li><a href="#werk" data-route="werk">Alle projecten</a></li>
+          <li><a href="#projecten" data-route="projecten">Alle projecten</a></li>
         </ul>
       </div>
       <div class="footer-col">
