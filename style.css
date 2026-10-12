@@ -599,3 +599,7 @@ main { min-height: 70vh; }
   .hero-img-detail { left: 0; }
   .band-featured, .band-quote, .band-slice { padding: 100px 0 90px; }
 }
+
+/* Foto's op hun eigen formaat tonen, zonder uitsnede */
+.frame.frame-natural, .split .frame.frame-natural, .hero-img-detail.frame-natural { aspect-ratio: auto; }
+.frame-natural img { height: auto; object-fit: contain; }
