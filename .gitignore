@@ -1,0 +1,5 @@
+# Werkbestanden van de agents — niet publiceren
+_werkmap/
+
+# macOS
+.DS_Store

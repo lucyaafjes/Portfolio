@@ -79,14 +79,16 @@ const projects = [
     slug: "het-karwei",
     title: "Het Karwei",
     category: "Architectuur",
-    cover: "images/cover-placeholder.jpg",
+    cover: "images/cover-karwei.jpg",
     intro: "Korte omschrijving van dit project: wat was de vraag, wat heb je gemaakt, en voor wie.",
     text: [
       "Vertel hier uitgebreider over dit project. Wat was de opdracht, hoe ben je te werk gegaan, en welke keuzes heb je gemaakt?",
       "Voeg gerust een tweede alinea toe over het eindresultaat of wat je hebt geleerd tijdens dit project."
     ],
     photos: [
-      { src: "images/cover-placeholder.jpg", alt: "Foto's van Het Karwei volgen nog", wide: true }
+      { src: "images/projecten/karwei-3.jpg", alt: "Maquette van de straatgevel van Het Karwei met oranje tegelplint en een workshopbord op de stoep", wide: true },
+      { src: "images/projecten/karwei-2.jpg", alt: "Maquette-interieur van Het Karwei: keuken met betegeld kookeiland en een dagmenu op het krijtbord", wide: false },
+      { src: "images/projecten/karwei-1.jpg", alt: "Maquette-interieur van Het Karwei: werkplaats met houten balkenplafond en een fiets aan de tegelwand", wide: false }
     ]
   },
   {
@@ -121,28 +123,31 @@ const projects = [
     slug: "van-boom-naar-bouwen",
     title: "Van Boom naar Bouwen",
     category: "Architectuur",
-    cover: "images/cover-placeholder.jpg",
+    cover: "images/cover-van-boom.jpg",
     intro: "Korte omschrijving van dit project: wat was de vraag, wat heb je gemaakt, en voor wie.",
     text: [
       "Vertel hier uitgebreider over dit project. Wat was de opdracht, hoe ben je te werk gegaan, en welke keuzes heb je gemaakt?",
       "Voeg gerust een tweede alinea toe over het eindresultaat of wat je hebt geleerd tijdens dit project."
     ],
     photos: [
-      { src: "images/cover-placeholder.jpg", alt: "Foto's van Van Boom naar Bouwen volgen nog", wide: true }
+      { src: "images/projecten/van-boom-1.jpg", alt: "Concept-plattegrond en aanzicht met detailtekeningen van de groene bunker, de boomhut en de bomengalerij", wide: true },
+      { src: "images/projecten/van-boom-2.jpg", alt: "Aanzicht zuidwestgevel en plattegrond van de boomhut, schaal 1:100", wide: false }
     ]
   },
   {
     slug: "wijlandje-cadix",
     title: "Wijlandje - Cadix",
     category: "Architectuur",
-    cover: "images/cover-placeholder.jpg",
+    cover: "images/cover-wijlandje.jpg",
     intro: "Korte omschrijving van dit project: wat was de vraag, wat heb je gemaakt, en voor wie.",
     text: [
       "Vertel hier uitgebreider over dit project. Wat was de opdracht, hoe ben je te werk gegaan, en welke keuzes heb je gemaakt?",
       "Voeg gerust een tweede alinea toe over het eindresultaat of wat je hebt geleerd tijdens dit project."
     ],
     photos: [
-      { src: "images/cover-placeholder.jpg", alt: "Foto's van Wijlandje - Cadix volgen nog", wide: true }
+      { src: "images/projecten/wijlandje-1.jpg", alt: "Gevelaanzicht Wijlandje - Cadix in rode baksteen met groen betegelde loggia's", wide: true },
+      { src: "images/projecten/wijlandje-2.jpg", alt: "Verdiepingsplattegrond rond de binnentuin en doorsnede van Wijlandje - Cadix", wide: false },
+      { src: "images/projecten/wijlandje-3.jpg", alt: "Maquette-interieur van een woning in Wijlandje - Cadix met groene keuken en eettafel", wide: false }
     ]
   },
   {
