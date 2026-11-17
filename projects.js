@@ -152,16 +152,22 @@ const projects = [
   },
   {
     slug: "phd-vormgeving",
-    title: "PhD Vormgeving",
+    title: "Proefschrift Sara Quist",
     category: "Illustratie",
-    cover: "images/cover-placeholder.jpg",
-    intro: "Korte omschrijving van dit project: wat was de vraag, wat heb je gemaakt, en voor wie.",
+    cover: "images/cover-phd-sara.jpg",
+    intro: "Kaft en hoofdstukillustraties voor het proefschrift van Sara Quist, externe promovenda aan het UMCG.",
     text: [
-      "Vertel hier uitgebreider over dit project. Wat was de opdracht, hoe ben je te werk gegaan, en welke keuzes heb je gemaakt?",
-      "Voeg gerust een tweede alinea toe over het eindresultaat of wat je hebt geleerd tijdens dit project."
+      "Het proefschrift van Sara Quist gaat over het verlichten van de druk op de oogheelkundige zorg, specifiek de retina, nu en in de toekomst. Het kijkt daarbij langs meerdere lijnen: kosten, milieu-impact, preventie en de stem van de patiënt. Ik ontwierp de kaft en de illustraties voor de hoofdstukpagina's.",
+      "Acht hoofdstukken vragen om samenhang zonder herhaling. Daarom werkte ik met een set getekende elementen die per hoofdstuk terugkomen, steeds in een andere compositie en met een eigen accentkleur. Het oog staat voor de retina, briefjes en muntjes voor kosten, de spuit voor de behandeling met anti-VEGF-injecties, de weegschaal voor kosteneffectiviteit en maatschappelijke last. De aardbol staat voor duurzaamheid, de grafiek voor data en outcomes research, de klok voor tijd en duurzamere therapieën, screening voor preventie, en de mond met spraakwolk voor de stem van de patiënt. Een doorlopend lint verbindt de elementen op elke pagina en op de kaft.",
+      "De keuze van de elementen per hoofdstuk stemde ik af met Sara, die per hoofdstuk feedback gaf. Zij had een voorkeur voor de geschetste, getekende stijl van mijn eerdere werk en voor rustige kleuren. Elk hoofdstuk kreeg Ã©Ã©n accentkleur: oranje, blauw, groen of rood. Het boek heeft twee delen, 'Reducing the current burden' en 'Exploring strategies to reduce future burden', met elk een eigen deelpagina en een generiek tussenblad.",
+      "De kaft heeft een blauwe ondergrond met een groen lint. Daarop staan het oog, de aardbol en de mond met spraakwolk: de retina, de omgeving en de patiënt. Eind juni 2026 nam Sara contact op, op 1 juli volgde mijn voorstel en begin september 2026 leverde ik op."
     ],
     photos: [
-      { src: "images/cover-placeholder.jpg", alt: "Foto's van PhD Vormgeving volgen nog", wide: true }
+      { src: "images/projecten/phd-sara-kaft.jpg", alt: "Kaft van het proefschrift: blauwe ondergrond met een groen lint, een oog, een aardbol, een mond met spraakwolk en een klok", wide: true },
+      { src: "images/projecten/phd-sara-hoofdstuk-1.jpg", alt: "Hoofdstukpagina met een oranje lint, een oog, een staafgrafiek, muntjes en bankbiljetten", wide: false },
+      { src: "images/projecten/phd-sara-hoofdstuk-3.jpg", alt: "Hoofdstukpagina met een blauw lint, een spuit, bankbiljetten en een gestapelde balans van vormen", wide: false },
+      { src: "images/projecten/phd-sara-hoofdstuk-8.jpg", alt: "Hoofdstukpagina met een groen lint, een oog, een mond met spraakwolk en een kleine grafiek", wide: false },
+      { src: "images/projecten/phd-sara-hoofdstuk-10.jpg", alt: "Hoofdstukpagina met een oranje lint in een lus, een oog, een mond met spraakwolk, een aardbol en een klok", wide: false }
     ]
   },
   {
